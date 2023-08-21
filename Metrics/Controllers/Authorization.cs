@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 namespace Metrics.Controllers;
 
 [ApiController]
-[Route("account/{accountId:guid}")]
+[Route("account")]
 public class Authorization : ControllerBase
 {
     private readonly TransactionMetrics _meters;
@@ -15,7 +15,7 @@ public class Authorization : ControllerBase
     }
 
     [HttpPost("auth", Name = "CreateAuthorization")]
-    public IActionResult Authorize([FromRoute] Guid accountId, [FromBody(EmptyBodyBehavior = EmptyBodyBehavior.Disallow)] AuthorizationRequest authorizationRequest)
+    public IActionResult Authorize([FromBody(EmptyBodyBehavior = EmptyBodyBehavior.Disallow)] AuthorizationRequest authorizationRequest)
     {
         if (authorizationRequest.Successful)
         {
