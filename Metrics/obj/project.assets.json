@@ -1333,11 +1333,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\Stratus\\Testing\\Metrics\\Metrics\\Metrics.csproj",
+      "projectUniqueName": "C:\\Workspace\\Stratus\\Testing\\TestMetrics\\Metrics\\Metrics.csproj",
       "projectName": "Metrics",
-      "projectPath": "C:\\Workspace\\Stratus\\Testing\\Metrics\\Metrics\\Metrics.csproj",
+      "projectPath": "C:\\Workspace\\Stratus\\Testing\\TestMetrics\\Metrics\\Metrics.csproj",
       "packagesPath": "C:\\Users\\N18613\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\Stratus\\Testing\\Metrics\\Metrics\\obj\\",
+      "outputPath": "C:\\Workspace\\Stratus\\Testing\\TestMetrics\\Metrics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\N18613\\AppData\\Roaming\\NuGet\\NuGet.Config"

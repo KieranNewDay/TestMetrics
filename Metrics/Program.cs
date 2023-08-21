@@ -1,6 +1,7 @@
 using System.Text.Json.Serialization;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 
 namespace Metrics;
 
@@ -21,13 +22,19 @@ public class Program
         builder.Services.AddSingleton(new TransactionMetrics());
 
         builder.Services.AddOpenTelemetry()
-            .WithMetrics(meterProviderBuilder => meterProviderBuilder
-                .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("TransactionService.WebApi"))
-                .AddMeter(TransactionMetrics.MetricName)
+            .WithTracing(traceProviderBuilder => traceProviderBuilder
                 .AddOtlpExporter(opts =>
                 {
-                    opts.Endpoint = new Uri(builder.Configuration["Otlp:Endpoint"]); //Otlp__Endpoint: http://otel-collector:4317
-                }));
+                    opts.Endpoint = new Uri("http://localhost:4318/v1/traces");
+                }))
+            // .WithMetrics(meterProviderBuilder => meterProviderBuilder
+            //     .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("TransactionService.WebApi"))
+            //     .AddMeter(TransactionMetrics.MetricName)
+            //     .AddOtlpExporter(opts =>
+            //     {
+            //         opts.Endpoint = new Uri("http://localhost:4318/v1/traces");
+            //     }))
+            ;
 
         var app = builder.Build();
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PUMF+iwwmI9UScR+VkWlVzjjA86Auut0oSyQFfcwyA6HdKzTWGny98RSsROub8wxwbEA7qmB7h+loXfi1E669A==",
+  "dgSpecHash": "NXOxYpyNWGAS30gIJ46W3oLewWXxI2AmrMiM3F9GBMIIYcHSLJv2Y3qa24ifoRFML5SiWgcirUqgnb2MRfhPaw==",
   "success": true,
-  "projectFilePath": "C:\\Workspace\\Stratus\\Testing\\Metrics\\Metrics\\Metrics.csproj",
+  "projectFilePath": "C:\\Workspace\\Stratus\\Testing\\TestMetrics\\Metrics\\Metrics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\N18613\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\N18613\\.nuget\\packages\\grpc.core.api\\2.43.0\\grpc.core.api.2.43.0.nupkg.sha512",
