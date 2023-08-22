@@ -1,0 +1,1 @@
+docker run -p 14268:14268 -p 8889:8889 -p 4317-4318:4317-4318 -v .\config.yaml:/etc/otelcol-contrib/config.yaml otel/opentelemetry-collector-contrib:0.83.0
